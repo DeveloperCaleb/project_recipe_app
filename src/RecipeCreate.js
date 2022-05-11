@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function RecipeCreate({ createRecipe }) {
-  const initialRender = {
+  const initialFormData = {
     name: "",
     cuisine: "",
     photo: "",
@@ -9,7 +9,7 @@ function RecipeCreate({ createRecipe }) {
     preparation: "",
   };
 
-  const [formData, setFormData] = useState({ initialRender });
+  const [formData, setFormData] = useState({ initialFormData });
   const handleChange = ({ target }) => {
     setFormData({
       ...formData,
@@ -20,7 +20,7 @@ function RecipeCreate({ createRecipe }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     createRecipe(formData);
-    setFormData(initialRender);
+    setFormData(initialFormData);
   };
 
   return (
