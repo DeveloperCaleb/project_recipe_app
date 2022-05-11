@@ -1,0 +1,9 @@
+img {
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: wheat;
+}
