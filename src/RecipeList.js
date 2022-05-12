@@ -22,9 +22,8 @@ function RecipeList({ recipes, deleteRecipes }) {
             <th>Preparation</th>
             <th>Action</th>
           </tr>
-          {recipeMap}
         </thead>
-        <tbody></tbody>
+        <tbody>{recipeMap}</tbody>
       </table>
     </div>
   );
