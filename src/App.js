@@ -11,6 +11,7 @@ function App() {
     setRecipes((currentRecipes) => [...currentRecipes, newRecipe]);
   };
 
+  //will remove the row that it passed in by comparing it's index to all current indexs in recipes.
   const deleteRecipe = (indexToDelete) =>
     setRecipes((currentRecipes) =>
       currentRecipes.filter((recipe, index) => index !== indexToDelete)

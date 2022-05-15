@@ -10,6 +10,7 @@ function RecipeCreate({ createRecipe }) {
   };
 
   const [formData, setFormData] = useState({ initialFormData });
+  //When form fields are changed the value of the equivalent object key in the formData is changed to the new value.
   const handleChange = ({ target }) => {
     setFormData({
       ...formData,
@@ -17,6 +18,7 @@ function RecipeCreate({ createRecipe }) {
     });
   };
 
+  //On submit of the form a new recipe will be created using the createRecipe prop and then the formData will be reset to the initialFormData
   const handleSubmit = (event) => {
     event.preventDefault();
     createRecipe(formData);
@@ -40,6 +42,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Name"
                 onChange={handleChange}
                 value={formData.name}
+                required
               ></input>
             </td>
             <td>
@@ -50,6 +53,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Cuisine"
                 onChange={handleChange}
                 value={formData.cuisine}
+                required
               ></input>
             </td>
             <td>
@@ -60,6 +64,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="URL"
                 onChange={handleChange}
                 value={formData.photo}
+                required
               ></input>
             </td>
             <td>
@@ -69,6 +74,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Ingredients"
                 onChange={handleChange}
                 value={formData.ingredients}
+                required
               ></textarea>
             </td>
             <td>
@@ -78,6 +84,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Preparation"
                 onChange={handleChange}
                 value={formData.preparation}
+                required
               ></textarea>
             </td>
             <td>

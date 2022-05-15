@@ -2,6 +2,7 @@ import React from "react";
 import RecipeItem from "./RecipeItem";
 
 function RecipeList({ recipes, deleteRecipes }) {
+  //each item in the recipes prop will be passed as a prop to the RecipeItem component.
   const recipeMap = recipes.map((recipe, index) => (
     <RecipeItem
       deleteRecipe={() => deleteRecipes(index)}
